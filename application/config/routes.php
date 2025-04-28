@@ -52,3 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// Admin Routes
+$route['admin'] = 'admin/index';
+$route['admin/input_daftar_ulang'] = 'admin/input_daftar_ulang';
+$route['admin/data_pendaftar'] = 'admin/data_pendaftar';
+$route['admin/peserta_daftar_ulang'] = 'admin/peserta_daftar_ulang';
+$route['admin/belum_daftar_ulang'] = 'admin/belum_daftar_ulang';
+$route['admin/laporan_harian'] = 'admin/laporan_harian';
+$route['admin/laporan_sekolah'] = 'admin/laporan_sekolah';
+$route['admin/save_daftar_ulang'] = 'admin/save_daftar_ulang';
+$route['admin/cetak_formulir/(:num)'] = 'admin/cetak_formulir/$1';
+$route['admin/cetak_bukti_daftar_ulang/(:num)'] = 'admin/cetak_bukti_daftar_ulang/$1';

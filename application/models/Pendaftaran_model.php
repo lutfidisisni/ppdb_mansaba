@@ -172,4 +172,37 @@ class Pendaftaran_model extends CI_Model {
         
         return ($query->num_rows() > 0) ? $query->row_array() : FALSE;
     }
+
+    public function get_all_pendaftar() {
+        return $this->db->get('pendaftaran')->result();
+    }
+
+    public function get_belum_daftar_ulang() {
+        // Ambil pendaftar yang status_daftar_ulang-nya 'belum' atau NULL
+        $this->db->where('(status_daftar_ulang = "belum" OR status_daftar_ulang IS NULL)');
+        return $this->db->get('pendaftaran')->result();
+    }
+
+    public function get_laporan_sekolah() {
+        $this->db->select('
+            nama_sekolah,
+            COUNT(*) as total_pendaftar,
+            SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as total_daftar_ulang
+        ');
+        $this->db->from('pendaftaran');
+        $this->db->group_by('nama_sekolah');
+        $this->db->order_by('total_pendaftar', 'DESC');
+        return $this->db->get()->result();
+    }
+
+    public function update_status_daftar_ulang($pendaftaran_id, $status = 'sudah')
+    {
+        $this->db->where('id', $pendaftaran_id);
+        return $this->db->update('pendaftaran', ['status_daftar_ulang' => $status]);
+    }
+
+    public function get_by_id($id)
+    {
+        return $this->get_pendaftaran_by_id($id);
+    }
 }
