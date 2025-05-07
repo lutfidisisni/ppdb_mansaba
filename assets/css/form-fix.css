@@ -1,0 +1,25 @@
+/* Fix for dropdown fields */
+select.form-control {
+    width: 100% !important;
+    min-width: 220px !important;
+    display: block !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Specific fixes for problematic dropdowns */
+#tinggal, #pendidikan_ayah, #pendidikan_ibu, #pendidikan_wali {
+    width: 100% !important;
+    min-width: 220px !important;
+}
+
+/* Ensure proper spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Better select display */
+select.form-control option {
+    padding: 10px;
+}
