@@ -1,0 +1,324 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Yuk daftar di MA NU 01 Banyuputih</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://manubanyuputih.id/wp-content/uploads/2020/05/cropped-logo-manu-1-3.png" type="image/png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        footer {
+            flex-shrink: 0;
+        }
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .shift-right-20px {
+            margin-right: 20px;
+        }
+        .shift-left-10px {
+            margin-left: 0;
+        }
+        .hover-button {
+            animation: pulse 2s infinite;
+        }
+        
+        .hover-button:hover {
+            background-color: #035648;
+            color: #ffffff;
+        }
+        .hover-form-button:hover {
+            background-color: #7ce828;
+        }
+        .font-poppins-extrabold {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+        }
+        .mt-10px {
+            margin-top: 10px;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1000; /* Pastikan nilai ini jauh lebih tinggi dari z-index sticky header */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s;
+            display: flex; /* Menggunakan flexbox untuk centering */
+            justify-content: center;
+            align-items: center;
+        }
+        #modal-content {
+            background-color: rgb(254, 254, 254);
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%; /* Ukuran default untuk layar yang lebih besar */
+            max-width: 600px; /* Batas lebar maksimum */
+            animation: raiseUp 0.5s;
+            position: relative; /* Untuk memposisikan close button */
+            /* Menghapus margin-top agar centering flexbox bekerja */
+        }
+        #close-modal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            margin-left: 10px;
+            position: absolute; /* Memposisikan close button di sudut */
+            top: 10px;
+            right: 10px;
+            cursor: pointer; /* Pastikan cursor menjadi pointer */
+        }
+        #close-modal:hover,
+        #close-modal:focus {
+            color: black;
+            text-decoration: none;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes raiseUp {
+            from {transform: translateY(100px);}
+            to {transform: translateY(0);}
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #10967f;
+            color: #ffffff;
+            padding: 10px 10px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+        }
+
+        #whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            z-index: 1000;
+        }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 200; /* Pastikan nilai ini lebih rendah dari z-index modal */
+            background-color: #0f7c73; /* Match the header background color */
+        }
+
+        /* Efek hover untuk menu */
+        nav.hidden.md\:flex.space-x-8 a:hover,
+        nav#mobile-menu a:hover {
+            background-color: #105951;
+            color: white;
+            border-radius: 5px; /* Tambahkan sedikit border-radius agar terlihat lebih menarik */
+            padding: 5px 10px; /* Tambahkan sedikit padding agar area hover lebih besar */
+        }
+
+        iframe {
+            max-width: 100%; /* Pastikan tidak melebihi lebar container */
+        }
+
+        /* Media query untuk layar dengan lebar maksimum 768px (ukuran umum untuk tablet ke bawah) */
+        @media (max-width: 768px) {
+            #modal-content {
+                width: 90%; /* Lebar modal menjadi lebih lebar di layar kecil */
+                /* Mengatur ulang margin agar tidak bentrok dengan flexbox */
+                margin-top: 10%;
+                margin-bottom: 10%;
+            }
+        }
+
+        /* Media query untuk layar dengan lebar maksimum 480px (ukuran umum untuk ponsel) */
+        @media (max-width: 480px) {
+            #modal-content {
+                width: 95%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding: 15px;
+            }
+            header {
+                padding: 2rem 1rem;
+            }
+            .shift-right-20px, .shift-left-10px {
+                margin: 0;
+            }
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+                text-align: center;
+                overflow-wrap: break-word;
+                margin: 0;
+            }
+            .flex-col {
+                gap: 0.8rem;
+            }
+            .max-w-xs {
+                width: 90%;
+            }
+            footer {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-teal-700 to-teal-500 text-white font-poppins">
+    <header class="flex flex-col items-center p-8 sticky-top">
+        <div class="flex flex-col items-center space-y-8 mb-1 mt-10px">
+            <img alt="Madrasah Humanis Logo" class="h-12 w-auto" src="https://ppdb.manubanyuputih.id/image/logo.png"/>
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a class="text-white font-normal px-4 py-2 hover:bg-teal-600 rounded-full" href="#">Home</a>
+                <a class="bg-white text-teal-700 px-6 py-2 rounded-full font-normal hover-form-button" href="ppdb/form_pendaftaran">Isi Formulir</a>
+                <a class="text-white font-normal px-4 py-2 hover:bg-teal-600 rounded-full" href="#">Contact</a>
+                <a class="text-white font-normal px-4 py-2 hover:bg-teal-600 rounded-full" href="admin">Login Admin</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 mt-4 bg-teal-700 w-full py-4">
+            <a class="text-white font-normal px-4 py-2 hover:bg-teal-600 rounded-full w-full text-center" href="#">Home</a>
+            <a class="bg-white text-teal-700 px-6 py-2 rounded-full font-normal hover-form-button w-full text-center" href="ppdb/form_pendaftaran">Isi Formulir</a>
+            <a class="text-white font-normal px-4 py-2 hover:bg-teal-600 rounded-full w-full text-center" href="#">Contact</a>
+            <a class="text-white font-normal px-4 py-2 hover:bg-teal-600 rounded-full w-full text-center" href="admin">Login Admin</a>
+        </nav>
+    </header>
+    <main class="text-center py-12">
+        <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-4">
+            <div class="text-right lg:w-1/2 px-4 lg:px-0 max-w-md shift-right-20px">
+                <h1 class="text-4xl font-poppins font-extrabold shift-right-10px">PPDB 2025/2026</h1>
+                <p class="mt-4 text-base font-poppins font-medium shift-left-10px">
+                    <span class="font-poppins-extrabold">MA NU 01 Banyuputih</span> Merupakan madrasah aliyah percontohan dan madrasah aliyah terbaik di kabupaten Batang, dengan program peminatan terlengkap dan memiliki program life skill yang membekali kamu untuk meraih masa depan
+                </p>
+                <a href="ppdb/form_pendaftaran" class="mt-6 bg-white text-teal-700 px-6 py-3 rounded-full font-bold inline-block hover-button">Daftar Sekarang!</a>
+            </div>
+            <div class="mt-1 lg:mt-0 lg:w-1/26">
+                <img alt="Student in uniform" class="w-full max-w-xs mx-auto" src="https://ppdb.manubanyuputih.id/image/model.png"/>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-teal-700 text-white py-4 text-center flex flex-col items-center">
+        <div class="mt-2 flex justify-center space-x-4 order-1">
+            <a href="#" target="_blank" class="hover:text-teal-200 rounded-full border border-white p-2">
+                <i class="fab fa-facebook-f fa-lg"></i>
+            </a>
+            <a href="#" target="_blank" class="hover:text-teal-200 rounded-full border border-white p-2">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="#" target="_blank" class="hover:text-teal-200 rounded-full border border-white p-2">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="#" target="_blank" class="hover:text-teal-200 rounded-full border border-white p-2">
+                <i class="fab fa-youtube fa-lg"></i>
+            </a>
+        </div>
+        <div class="order-2 mt-2">
+            &copy; 2025 MA NU 01 Banyuputih. All rights reserved.
+        </div>
+    </footer>
+    <button id="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="modal">
+        <div id="modal-content">
+            <span id="close-modal">&times;</span>
+            <img src="https://manubanyuputih.id/jurnal/gambar.jpg" alt="Popup Image" class="w-full h-auto"/>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        var modal = document.getElementById("modal");
+        var closeModal = document.getElementById("close-modal");
+        var stickyHeader = document.querySelector('.sticky-top');
+        var headerBackgroundColor = '#0f7c73'; // Warna awal header
+
+        // Show the modal
+        window.onload = function() {
+            modal.style.display = "flex";
+        }
+
+        // Close the modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            var scrollToTopButton = document.getElementById('scroll-to-top');
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = 'block';
+                if (stickyHeader) {
+                    stickyHeader.style.backgroundColor = '#0b5e57'; // Warna header saat di-scroll
+                }
+            } else {
+                scrollToTopButton.style.display = 'none';
+                if (stickyHeader) {
+                    stickyHeader.style.backgroundColor = headerBackgroundColor; // Kembalikan warna awal
+                }
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/628123456789" target="_blank" id="whatsapp-button">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+
+    <button id="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>

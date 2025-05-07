@@ -1,0 +1,16 @@
+2025-04-30 19:27:11 - Redirecting to pendaftaran_sukses with nomor: A-2526/0162
+2025-04-30 19:27:18 - Redirecting to pendaftaran_sukses with nomor: A-2526/0162
+2025-04-30 19:32:41 - Redirecting with parameters: Array
+(
+    [nomor] => A-2526/0162
+)
+
+2025-04-30 19:32:41 - Redirecting to: http://localhost/ppdb_manu/index.php/ppdb/pendaftaran_sukses/A-2526/0162
+2025-04-30 19:37:58 - Redirecting to pendaftaran_sukses with nomor: A-2526/0163
+2025-04-30 19:41:21 - Redirecting with parameters: Array
+(
+    [nomor] => A-2526/0163
+)
+
+2025-04-30 19:41:21 - Redirecting to: http://localhost/ppdb_manu/index.php/ppdb/pendaftaran_sukses/A-2526/0163
+2025-04-30 19:45:22 - Redirecting to pendaftaran_sukses with nomor: TEST95425

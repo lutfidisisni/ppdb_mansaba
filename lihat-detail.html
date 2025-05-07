@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Details</title>
+    <script>
+        // Extract registration number from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomor = urlParams.get('nomor');
+        
+        // When page loads, redirect to success page
+        window.onload = function() {
+            if (nomor) {
+                // Direct URL to success page - using absolute path to avoid any routing issues
+                window.location.href = '/ppdb_manu/index.php/ppdb/pendaftaran_sukses/' + nomor;
+            } else {
+                // Fallback to form
+                alert('No registration number provided');
+                window.location.href = '/ppdb_manu/index.php/ppdb/form_pendaftaran';
+            }
+        };
+    </script>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h2>Redirecting to registration details...</h2>
+        <p>If you are not redirected automatically, <a id="directLink" href="#">click here</a>.</p>
+    </div>
+
+    <script>
+        // Set the direct link URL
+        const directLink = document.getElementById('directLink');
+        if (nomor) {
+            directLink.href = '/ppdb_manu/index.php/ppdb/pendaftaran_sukses/' + nomor;
+        } else {
+            directLink.href = '/ppdb_manu/index.php/ppdb/form_pendaftaran';
+        }
+    </script>
+</body>
+</html>
