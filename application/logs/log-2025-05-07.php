@@ -22788,3 +22788,24 @@ INFO - 2025-05-07 11:56:55 --> File loaded: /www/wwwroot/ppdb.manubanyuputih.id/
 INFO - 2025-05-07 11:56:55 --> File loaded: /www/wwwroot/ppdb.manubanyuputih.id/application/views/admin/dashboard.php
 INFO - 2025-05-07 11:56:55 --> Final output sent to browser
 DEBUG - 2025-05-07 11:56:55 --> Total execution time: 0.0363
+INFO - 2025-05-07 12:04:27 --> Config Class Initialized
+INFO - 2025-05-07 12:04:27 --> Hooks Class Initialized
+DEBUG - 2025-05-07 12:04:27 --> UTF-8 Support Enabled
+INFO - 2025-05-07 12:04:27 --> Utf8 Class Initialized
+INFO - 2025-05-07 12:04:27 --> URI Class Initialized
+DEBUG - 2025-05-07 12:04:27 --> No URI present. Default controller set.
+INFO - 2025-05-07 12:04:27 --> Router Class Initialized
+INFO - 2025-05-07 12:04:27 --> Output Class Initialized
+INFO - 2025-05-07 12:04:27 --> Security Class Initialized
+DEBUG - 2025-05-07 12:04:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-07 12:04:27 --> Input Class Initialized
+INFO - 2025-05-07 12:04:27 --> Language Class Initialized
+INFO - 2025-05-07 12:04:27 --> Loader Class Initialized
+INFO - 2025-05-07 12:04:27 --> Helper loaded: form_helper
+INFO - 2025-05-07 12:04:27 --> Helper loaded: url_helper
+INFO - 2025-05-07 12:04:27 --> Database Driver Class Initialized
+INFO - 2025-05-07 12:04:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-07 12:04:27 --> Form Validation Class Initialized
+INFO - 2025-05-07 12:04:27 --> Controller Class Initialized
+INFO - 2025-05-07 12:04:27 --> Final output sent to browser
+DEBUG - 2025-05-07 12:04:27 --> Total execution time: 0.0293
