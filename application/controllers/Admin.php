@@ -192,6 +192,20 @@ class Admin extends CI_Controller {
         }
     }
 
+    public function update_rekomendasi_guru() {
+        $id = $this->input->post('id');
+        $rekomendasi_guru = $this->input->post('rekomendasi_guru');
+        
+        $this->db->where('id', $id);
+        $result = $this->db->update('pendaftaran', ['rekomendasi_guru' => $rekomendasi_guru]);
+        
+        if ($result) {
+            echo json_encode(['status' => 'success']);
+        } else {
+            echo json_encode(['status' => 'error']);
+        }
+    }
+
     public function tambah_petugas() {
         $this->load->view('admin/tambah_petugas');
     }
@@ -357,10 +371,10 @@ class Admin extends CI_Controller {
         redirect('admin/peserta_daftar_ulang');
     }
 
-    public function laporan_rekomendasi() {
-        $data['title'] = 'Laporan Data Rekomendasi';
-        $data['laporan'] = $this->Pendaftaran_model->get_laporan_rekomendasi();
-        $this->load->view('admin/laporan_rekomendasi', $data);
+    public function laporan_rekomendasi_guru() {
+        $data['title'] = 'Laporan Rekomendasi Guru';
+        $data['rekomendasi_guru'] = $this->Pendaftaran_model->get_rekomendasi_guru();
+        $this->load->view('admin/laporan_rekomendasi_guru', $data);
     }
 
     public function laporan_seragam() {

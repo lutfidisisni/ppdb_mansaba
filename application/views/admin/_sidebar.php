@@ -56,6 +56,12 @@
             </a>
         </li>
         <li>
+            <a href="<?php echo site_url('admin/laporan_rekomendasi_guru'); ?>" class="nav-link d-flex align-items-center <?php echo $current=='laporan_rekomendasi_guru'?'active':''; ?>">
+                <i class="bi bi-person me-2"></i>
+                <span>Laporan Rekomendasi Guru</span>
+            </a>
+        </li>
+        <li>
             <a href="<?php echo site_url('admin/laporan_seragam'); ?>" class="nav-link d-flex align-items-center <?php echo $current=='laporan_seragam'?'active':''; ?>">
                 <i class="bi bi-bag me-2"></i>
                 <span>Laporan Seragam</span>

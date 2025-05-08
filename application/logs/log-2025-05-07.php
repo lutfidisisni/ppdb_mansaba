@@ -809,3 +809,75 @@ INFO - 2025-05-07 09:18:46 --> Model "Ppdb_model" initialized
 INFO - 2025-05-07 09:18:46 --> File loaded: C:\xampp\htdocs\ppdb\application\views\ppdb/form_pendaftaran.php
 INFO - 2025-05-07 09:18:46 --> Final output sent to browser
 DEBUG - 2025-05-07 09:18:46 --> Total execution time: 0.0278
+INFO - 2025-05-07 09:41:08 --> Config Class Initialized
+INFO - 2025-05-07 09:41:08 --> Hooks Class Initialized
+DEBUG - 2025-05-07 09:41:08 --> UTF-8 Support Enabled
+INFO - 2025-05-07 09:41:08 --> Utf8 Class Initialized
+INFO - 2025-05-07 09:41:08 --> URI Class Initialized
+INFO - 2025-05-07 09:41:08 --> Router Class Initialized
+INFO - 2025-05-07 09:41:08 --> Output Class Initialized
+INFO - 2025-05-07 09:41:08 --> Security Class Initialized
+DEBUG - 2025-05-07 09:41:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-07 09:41:08 --> Input Class Initialized
+INFO - 2025-05-07 09:41:08 --> Language Class Initialized
+INFO - 2025-05-07 09:41:08 --> Loader Class Initialized
+INFO - 2025-05-07 09:41:08 --> Helper loaded: form_helper
+INFO - 2025-05-07 09:41:08 --> Helper loaded: url_helper
+INFO - 2025-05-07 09:41:08 --> Database Driver Class Initialized
+INFO - 2025-05-07 09:41:08 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-07 09:41:08 --> Form Validation Class Initialized
+INFO - 2025-05-07 09:41:08 --> Controller Class Initialized
+INFO - 2025-05-07 09:41:08 --> Model "Pendaftaran_model" initialized
+INFO - 2025-05-07 09:41:08 --> Model "Daftar_ulang_model" initialized
+INFO - 2025-05-07 09:41:08 --> File loaded: C:\xampp\htdocs\ppdb\application\views\admin/_sidebar.php
+INFO - 2025-05-07 09:41:08 --> File loaded: C:\xampp\htdocs\ppdb\application\views\admin/dashboard.php
+INFO - 2025-05-07 09:41:08 --> Final output sent to browser
+DEBUG - 2025-05-07 09:41:08 --> Total execution time: 0.0293
+INFO - 2025-05-07 09:41:10 --> Config Class Initialized
+INFO - 2025-05-07 09:41:10 --> Hooks Class Initialized
+DEBUG - 2025-05-07 09:41:10 --> UTF-8 Support Enabled
+INFO - 2025-05-07 09:41:10 --> Utf8 Class Initialized
+INFO - 2025-05-07 09:41:10 --> URI Class Initialized
+INFO - 2025-05-07 09:41:10 --> Router Class Initialized
+INFO - 2025-05-07 09:41:10 --> Output Class Initialized
+INFO - 2025-05-07 09:41:10 --> Security Class Initialized
+DEBUG - 2025-05-07 09:41:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-07 09:41:10 --> Input Class Initialized
+INFO - 2025-05-07 09:41:10 --> Language Class Initialized
+INFO - 2025-05-07 09:41:10 --> Loader Class Initialized
+INFO - 2025-05-07 09:41:10 --> Helper loaded: form_helper
+INFO - 2025-05-07 09:41:10 --> Helper loaded: url_helper
+INFO - 2025-05-07 09:41:10 --> Database Driver Class Initialized
+INFO - 2025-05-07 09:41:10 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-07 09:41:10 --> Form Validation Class Initialized
+INFO - 2025-05-07 09:41:10 --> Controller Class Initialized
+INFO - 2025-05-07 09:41:10 --> Model "Pendaftaran_model" initialized
+INFO - 2025-05-07 09:41:10 --> Model "Daftar_ulang_model" initialized
+INFO - 2025-05-07 09:41:10 --> File loaded: C:\xampp\htdocs\ppdb\application\views\admin/_sidebar.php
+INFO - 2025-05-07 09:41:10 --> File loaded: C:\xampp\htdocs\ppdb\application\views\admin/data_pendaftar_lengkap.php
+INFO - 2025-05-07 09:41:10 --> Final output sent to browser
+DEBUG - 2025-05-07 09:41:10 --> Total execution time: 0.0325
+INFO - 2025-05-07 09:47:14 --> Config Class Initialized
+INFO - 2025-05-07 09:47:14 --> Hooks Class Initialized
+DEBUG - 2025-05-07 09:47:14 --> UTF-8 Support Enabled
+INFO - 2025-05-07 09:47:14 --> Utf8 Class Initialized
+INFO - 2025-05-07 09:47:14 --> URI Class Initialized
+INFO - 2025-05-07 09:47:14 --> Router Class Initialized
+INFO - 2025-05-07 09:47:14 --> Output Class Initialized
+INFO - 2025-05-07 09:47:14 --> Security Class Initialized
+DEBUG - 2025-05-07 09:47:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-07 09:47:14 --> Input Class Initialized
+INFO - 2025-05-07 09:47:14 --> Language Class Initialized
+INFO - 2025-05-07 09:47:14 --> Loader Class Initialized
+INFO - 2025-05-07 09:47:14 --> Helper loaded: form_helper
+INFO - 2025-05-07 09:47:14 --> Helper loaded: url_helper
+INFO - 2025-05-07 09:47:14 --> Database Driver Class Initialized
+INFO - 2025-05-07 09:47:14 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-07 09:47:14 --> Form Validation Class Initialized
+INFO - 2025-05-07 09:47:14 --> Controller Class Initialized
+INFO - 2025-05-07 09:47:14 --> Model "Pendaftaran_model" initialized
+INFO - 2025-05-07 09:47:14 --> Model "Daftar_ulang_model" initialized
+INFO - 2025-05-07 09:47:14 --> File loaded: C:\xampp\htdocs\ppdb\application\views\admin/_sidebar.php
+INFO - 2025-05-07 09:47:14 --> File loaded: C:\xampp\htdocs\ppdb\application\views\admin/data_pendaftar_lengkap.php
+INFO - 2025-05-07 09:47:14 --> Final output sent to browser
+DEBUG - 2025-05-07 09:47:14 --> Total execution time: 0.0341

@@ -9,6 +9,20 @@ class Pendaftaran_model extends CI_Model {
     }
 
     /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+
+    /**
      * Simpan data pendaftaran ke database
      * 
      * @param array $data Data pendaftaran
@@ -42,8 +56,58 @@ class Pendaftaran_model extends CI_Model {
                         'status' => false,
                         'message' => 'Field ' . $field . ' harus diisi'
                     ];
-                }
-            }
+                    /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
+                /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
             
             log_message('debug', 'All required fields present');
             
@@ -54,7 +118,32 @@ class Pendaftaran_model extends CI_Model {
                     'status' => false,
                     'message' => 'Siswa dengan nama dan tanggal lahir yang sama sudah terdaftar'
                 ];
-            }
+                /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
             
             log_message('debug', 'No duplicates found, proceeding with insert');
             
@@ -73,7 +162,32 @@ class Pendaftaran_model extends CI_Model {
                     'status' => false,
                     'message' => 'Terjadi kesalahan saat menyimpan data: ' . $error['message']
                 ];
-            }
+                /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
             
             log_message('debug', 'Data successfully inserted with ID: ' . $insert_id);
             log_message('debug', '=== End simpan_pendaftaran ===');
@@ -85,14 +199,89 @@ class Pendaftaran_model extends CI_Model {
                 'id' => $insert_id
             ];
             
-        } catch (Exception $e) {
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+} catch (Exception $e) {
             log_message('error', 'Error in simpan_pendaftaran: ' . $e->getMessage());
             return [
                 'status' => false,
                 'message' => 'Terjadi kesalahan sistem: ' . $e->getMessage()
             ];
-        }
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     /**
      * Generate nomor pendaftaran otomatis
@@ -115,13 +304,88 @@ class Pendaftaran_model extends CI_Model {
         if ($query->num_rows() > 0) {
             $last_no = $query->row()->no_pendaftaran;
             $sequence = intval(substr($last_no, -4)) + 1;
-        } else {
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+} else {
             $sequence = 1;
-        }
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
         
         // Format: YYYYMMXXXX (YYYY = year, MM = month, XXXX = sequence number)
         return $year . $month . str_pad($sequence, 4, '0', STR_PAD_LEFT);
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     /**
      * Cek apakah NISN sudah terdaftar sebelumnya
@@ -133,13 +397,63 @@ class Pendaftaran_model extends CI_Model {
     {
         if (empty($nisn)) {
             return FALSE;
-        }
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
         $this->db->where('nisn', $nisn);
         $query = $this->db->get('pendaftaran');
         
         return ($query->num_rows() > 0);
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     /**
      * Cek apakah nomor HP sudah terdaftar sebelumnya
@@ -151,7 +465,32 @@ class Pendaftaran_model extends CI_Model {
     {
         if (empty($no_hp)) {
             return FALSE;
-        }
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
         $this->db->group_start()
              ->where('no_hp_siswa', $no_hp)
@@ -163,7 +502,32 @@ class Pendaftaran_model extends CI_Model {
         $query = $this->db->get('pendaftaran');
         
         return ($query->num_rows() > 0);
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     /**
      * Dapatkan data pendaftaran berdasarkan ID
@@ -175,13 +539,63 @@ class Pendaftaran_model extends CI_Model {
     {
         if (empty($id) || !is_numeric($id)) {
             return FALSE;
-        }
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
         $this->db->where('id', $id);
         $query = $this->db->get('pendaftaran');
         
         return ($query->num_rows() > 0) ? $query->row_array() : FALSE;
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     /**
      * Dapatkan data pendaftaran berdasarkan nomor pendaftaran
@@ -193,26 +607,126 @@ class Pendaftaran_model extends CI_Model {
     {
         if (empty($no_pendaftaran)) {
             return FALSE;
-        }
+            /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
         $this->db->where('no_pendaftaran', $no_pendaftaran);
         $query = $this->db->get('pendaftaran');
         
         return ($query->num_rows() > 0) ? $query->row_array() : FALSE;
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function get_all_pendaftar() {
         $this->db->select('pendaftaran.*, daftar_ulang.no_daftar_ulang');
         $this->db->from('pendaftaran');
         $this->db->join('daftar_ulang', 'pendaftaran.id = daftar_ulang.pendaftaran_id', 'left');
         return $this->db->get()->result();
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function get_belum_daftar_ulang() {
         // Ambil pendaftar yang status_daftar_ulang-nya 'belum' atau NULL
         $this->db->where('(status_daftar_ulang = "belum" OR status_daftar_ulang IS NULL)');
         return $this->db->get('pendaftaran')->result();
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function get_laporan_sekolah() {
         $this->db->select('
@@ -224,18 +738,93 @@ class Pendaftaran_model extends CI_Model {
         $this->db->group_by('nama_sekolah');
         $this->db->order_by('total_pendaftar', 'DESC');
         return $this->db->get()->result();
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function update_status_daftar_ulang($pendaftaran_id, $status = 'sudah')
     {
         $this->db->where('id', $pendaftaran_id);
         return $this->db->update('pendaftaran', ['status_daftar_ulang' => $status]);
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function get_by_id($id)
     {
         return $this->get_pendaftaran_by_id($id);
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function get_laporan_harian($tanggal = null) {
         $this->db->select("COUNT(*) as total_pendaftar, 
@@ -243,7 +832,32 @@ class Pendaftaran_model extends CI_Model {
                           SUM(CASE WHEN jenis_kelamin = 'laki-laki' THEN 1 ELSE 0 END) as total_laki,
                           SUM(CASE WHEN jenis_kelamin = 'perempuan' THEN 1 ELSE 0 END) as total_perempuan");
         return $this->db->get()->row();
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function get_laporan_rekomendasi() {
         $this->db->select('
@@ -256,18 +870,118 @@ class Pendaftaran_model extends CI_Model {
         $this->db->group_by('rekomendasi');
         $this->db->order_by('total_pendaftar', 'DESC');
         return $this->db->get()->result();
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function update_pendaftaran($id, $data) {
         $this->db->where('id', $id);
         return $this->db->update('pendaftaran', $data);
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
 
     public function check_duplicate($nama_lengkap, $tanggal_lahir) {
         $this->db->where('nama_siswa', $nama_lengkap);
         $this->db->where('tanggal_lahir', $tanggal_lahir);
         $query = $this->db->get('pendaftaran');
         return $query->num_rows() > 0;
+        /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
     }
 
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
+}
+
+    /**
+     * Get rekomendasi guru data with registration statistics
+     */
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_rekomendasi_guru()
+    {
+        $this->db->select('guru_rekomendasi as nama_guru, 
+                          COUNT(*) as jumlah_pendaftar, 
+                          SUM(CASE WHEN status_daftar_ulang = "sudah" THEN 1 ELSE 0 END) as jumlah_daftar_ulang');
+        $this->db->from('pendaftaran');
+        $this->db->where('guru_rekomendasi IS NOT NULL');
+        $this->db->group_by('guru_rekomendasi');
+        return $this->db->get()->result();
+    }
 }

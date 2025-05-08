@@ -216,6 +216,7 @@
                                     <th>Status Daftar Ulang</th>
                                     <th>Nomor Daftar Ulang</th>
                                     <th>Rekomendasi</th>
+                                    <th>Rekomendasi Guru</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -260,7 +261,65 @@
                                         </span>
                                     </td>
                                     <td><?php echo $p->no_daftar_ulang ?? '-'; ?></td>
-                                    <td><?php echo $p->rekomendasi; ?></td>
+                                    <td><?php echo $p->rekomendasi ?? '-'; ?></td>
+                                    <td>
+    <select class="form-select form-select-sm" name="rekomendasi_guru">
+        <option value="">-- Pilih Guru --</option>
+        <?php 
+        $guru = [
+            'lain',
+            'Ayuni Azahra',
+            'H. Mukhsin, S.Ag., M.Pd.I.',
+            'H. Rokhim, S.Pd.I.',
+            'H. Shofyan, S.Ag.',
+            'Bambang Eriyanto, S.H.',
+            'Faridah, S.Pd.I.',
+            'H. Fatchul Achyar, S.Pd.',
+            'Nunik Murwati, S.Pd.',
+            'Arini Ainul Hanifah, M.Pd.',
+            'Vebryani Wulandari, S.Pd.',
+            'Ahmad Hasan, M.Pd',
+            'Mukhamad Miftahul Atiq, M.Pd.',
+            'Hanief Kurnia, S.Pd.',
+            'Atabik Muhammad Munji Umam, S.Pd.',
+            'Achmad Mashfufi, M.Pd.',
+            'Maghfirotul Hardikaningrum, S.Pd.',
+            'M Hary Satriya, S.Pd.',
+            'Tuh Fandi, SST',
+            'Era Yunitya, S.Pd.',
+            'Aini Sa\'diyah, S.S.',
+            'Ahmad Hasan, S.Pd.I.',
+            'Umi Fauziyah, S.Pd.',
+            'Izazul Huda, S.Pd.',
+            'H. Choirul Anam, S.Ag.',
+            'Inayatun Nisa, SHI., M.E',
+            'Rikza Umam, S.Pd.',
+            'Indah Yulianti, S.Pd.',
+            'Rifatul Saidah, S.Pd',
+            'Muhammad Asrofi, SE',
+            'Mutmainah, S.Pd',
+            'Nadirin, S.Ds',
+            'Nur Fadlilatul Choiriyah, S.H',
+            'Rahmawati Yunia Astuti, S.Pd.',
+            'Rohmatul Khasanah, S.Pd.',
+            'Harun Al Rosyid, S.Pd.',
+            'Safana Aulia Faza, S.Pd.',
+            'Saniyah, S.H',
+            'Sutrimo',
+            'Mugiyono',
+            'Akhmad Lutfi',
+            'Ahmad Fahri Khusaini',
+            'Nailul Hikam',
+            'Muhammad Hadi Ulqi Faiz',
+            'Khamidun',
+            'Lutfi Fuat',
+            'Koulul Mustolif'
+        ];
+        foreach($guru as $nama): ?>
+        <option value="<?= $nama ?>" <?= ($p->rekomendasi_guru == $nama) ? 'selected' : '' ?>><?= $nama ?></option>
+        <?php endforeach; ?>
+    </select>
+</td>
                                     <td>
                                         <div class="btn-group">
                                             <a href="<?php echo site_url('admin/cetak_formulir/'.$p->id); ?>" class="btn btn-sm btn-info" title="Cetak Formulir">
@@ -300,12 +359,55 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script>
         $(document).ready(function() {
+            // Event handler untuk perubahan dropdown rekomendasi guru
+            $('select[name="rekomendasi_guru"]').on('change', function() {
+                var id = $(this).closest('tr').find('.row-check').val();
+                var rekomendasi_guru = $(this).val();
+                
+                $.ajax({
+                    url: '<?php echo site_url("admin/update_rekomendasi_guru"); ?>',
+                    type: 'POST',
+                    data: {
+                        id: id,
+                        rekomendasi_guru: rekomendasi_guru
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if(data.status === 'success') {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Berhasil',
+                                text: 'Rekomendasi guru berhasil diperbarui',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Gagal',
+                                text: 'Terjadi kesalahan saat memperbarui rekomendasi guru'
+                            });
+                        }
+                    },
+                    error: function() {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Gagal',
+                            text: 'Terjadi kesalahan pada server'
+                        });
+                    }
+                });
+            });
+
             var table = $('#tablePendaftarLengkap').DataTable({
                 dom: '<"d-flex justify-content-between align-items-center mb-3"l<"d-flex gap-2"B>>rtip',
+                pageLength: 10,
+                displayStart: 0,
                 lengthMenu: [
-                    [10, 25, 50, 100, -1],
-                    ['10 Baris', '25 Baris', '50 Baris', '100 Baris', 'Semua']
+                    [10, 25, 50, 100],
+                    ['10 Baris', '25 Baris', '50 Baris', '100 Baris']
                 ],
+                iDisplayLength: 10,
                 buttons: [
                     {
                         extend: 'excel',
